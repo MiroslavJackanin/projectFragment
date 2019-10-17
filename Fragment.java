@@ -32,10 +32,11 @@ public class Fragment {
     }
 
     //METHODS
-    public void changeToBasicShape(){
+    public Fragment changeToBasicShape(){
         int commonDivisor=getBiggestCommonDivisor();
         numerator/=commonDivisor;
         denominator/=commonDivisor;
+        return null;
     }
 
     public void extendFragment(int value){
@@ -65,8 +66,8 @@ public class Fragment {
     }
 
     private int getBiggestCommonDivisor(){
-        int absNumerator=Math.abs(numerator);
-        int absDenominator=Math.abs(denominator);
+        int absNumerator= Math.abs(numerator);
+        int absDenominator= Math.abs(denominator);
 
         int commonDivisor=absNumerator<absDenominator?absNumerator:absDenominator;
         while(absNumerator%commonDivisor!=0 || absDenominator%commonDivisor!=0){
@@ -85,5 +86,11 @@ public class Fragment {
     @Override
     public String toString(){
         return numerator+" / "+denominator;
+    }
+
+    public mixedNumber getMixedNumber(){
+        int value=numerator/denominator;
+        Fragment f=new Fragment(numerator%denominator, denominator);
+        return new mixedNumber(value, f);
     }
 }

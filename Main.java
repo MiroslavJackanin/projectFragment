@@ -1,7 +1,10 @@
 package sk.itsovy.jackanin.fragment;
 
+import java.util.jar.JarOutputStream;
+
 public class Main {
     public static void main(String[] args) {
+
         Fragment fragment1=new Fragment(32,48);
 
         System.out.println(fragment1.toString());
@@ -29,5 +32,26 @@ public class Main {
 
         Fragment fragment5=new Fragment(fragment2);
         System.out.println(fragment5.toString());
+
+        System.out.println("-------------------------");
+
+        mixedNumber mixNum1=new mixedNumber(1,2,3);
+        System.out.println(mixNum1.toString());
+
+        mixedNumber mixNum2=new mixedNumber(5, fragment1);
+        System.out.println(mixNum2.toString());
+
+        System.out.println(mixNum1.getRealValue());
+
+        System.out.println("--------------------------");
+        Fragment fragment6=new Fragment(9,3);
+        Fragment fragment7=new Fragment(3,5);
+        myMath math=new myMath();
+        System.out.println(math.add(fragment6, fragment7));
+        System.out.println(math.sub(fragment6, fragment7));
+        System.out.println(math.mul(fragment6, fragment7));
+        System.out.println(math.div(fragment6, fragment7));
+
+        System.out.println(myMath.sub(fragment6, fragment7));
     }
 }
