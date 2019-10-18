@@ -4,7 +4,7 @@ import java.util.jar.JarOutputStream;
 
 public class Main {
     public static void main(String[] args) {
-
+        /*
         Fragment fragment1=new Fragment(32,48);
 
         System.out.println(fragment1.toString());
@@ -53,5 +53,23 @@ public class Main {
         System.out.println(math.div(fragment6, fragment7));
 
         System.out.println(myMath.sub(fragment6, fragment7));
+         */
+        System.out.println("----------------------------");
+
+        Rectangle rectangle1=new Rectangle(4, 7, '#', false);
+        System.out.println("Diagonale: "+rectangle1.calcArea());
+        System.out.println(rectangle1.calcDiagonal());
+        System.out.println(rectangle1.calcPerimeter());
+
+        rectangle1.setCharacter('H');
+        rectangle1.showRectangle();
+        rectangle1.print();
+
+        System.out.println("-----------------------------");
+        Circle circle1=new Circle(5);
+        System.out.println(circle1.calcArea());
+        System.out.println(circle1.calcDiameter());
+        System.out.println(circle1.calcPerimeter());
+        circle1.print();
     }
 }
