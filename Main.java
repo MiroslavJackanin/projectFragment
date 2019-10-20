@@ -71,5 +71,11 @@ public class Main {
         System.out.println(circle1.calcDiameter());
         System.out.println(circle1.calcPerimeter());
         circle1.print();
+
+        System.out.println("------------------------------");
+        Bank bank1=new Bank("TatraBanka");
+        System.out.printf("%.2f", (bank1.convert(120, "CHF")));
+        System.out.println();
+        System.out.println(Bank.loan(6000, 2.8 , -36));
     }
 }

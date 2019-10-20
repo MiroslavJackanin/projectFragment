@@ -1,7 +1,5 @@
 package sk.itsovy.jackanin.fragment;
 
-import java.text.DecimalFormat;
-
 public class Bank {
     private String name;
 
